@@ -17,7 +17,7 @@ body {
     height: 30vh;
 	justify-content: center;
 	align-items: center;
-	background-image: url(../images/album_banner.jpg);
+	background-image:url(../images/album_banner.jpg);
 	position: relative;
 	background-size:auto;
    
