@@ -1,0 +1,370 @@
+body {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 0;
+	border : 0;
+	margin : 0;
+	text-align:center;
+	font: 100% Georgia, "Times New Roman", Times, serif;
+	background: gray;
+}
+/* Banner background and content */
+.banner{
+	display: flex;
+	padding: 0;
+	width: 100%;
+    height: 30vh;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../images/album_banner.jpg);
+	position: relative;
+	background-size:auto;
+   
+}
+/* Text inside the banner */
+.banner h1{
+	padding-top: 0;
+	font-family: Copperplate, fantasy;
+	font-size:8vh;
+	font-weight:normal;
+	filter: none;
+	color:chocolate;
+	background-color: rgba(0, 0, 0, 0.714);
+	text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+}
+/* Holds all content, exclude images */
+.container{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	font-size: 1.5vw;
+	flex-direction: row;
+	flex-basis: content;
+	align-items: center;
+	text-align: left;
+	color:#c7b3f5;
+	padding-bottom: 7vh;
+	/*background-color: rgba(0, 0, 0, 0.714);
+	text-shadow: -0px -0px 0 #000, 0px -0px 0 #000, -3px 3px 0 #000, 3px 3px 0 rgb(0, 0, 0);*/
+}
+
+/* Holds everything below nav */
+.main-content{
+	background-image:url(../images/bg.jpg);
+	background-size:auto;
+	background-repeat:none;
+}
+/* pg 3 stuff*/
+.flex-row{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-bottom: 5vw;
+	padding-top: 5vw;
+}
+.flex-row .content-intro{
+	width: 100%;
+	margin-left: 4vw;
+	margin-right: 4vw;
+}
+.flex-row .image{
+	vertical-align: middle;
+	text-align: center;
+	width: 50vw;
+	margin-right: 5vw;
+	height:auto;
+	animation: fadeIn 4s;
+}
+
+/* for pg2, content for slides*/
+.category{
+	animation: fadeIn 2s;
+}
+
+.content, .content-intro{
+	width: 100%;
+	line-height: 1.3;
+	height: auto;
+	margin: 0 4vw 0 7vw;
+	animation: fadeIn 3s;
+}
+
+/* for page 2 dont touch*/
+.content-intro{
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+	width: 85%;
+	color:#c7b3f5;
+	font-size: 1.5vw;
+}
+
+@keyframes fadeIn{
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+/* Links that are included in the content */
+.content a{
+	padding: 0;
+	border: none;
+	font-size: 100%;
+	font-style: italic;
+	text-shadow: none;
+	color: #c7b3f5;
+}
+.content a:link{
+	color: #c7b3f5;
+}
+.content a:visited{
+	color:#c7b3f5;
+}
+.content a:hover{
+	color:#9483ba;
+}
+
+/* vinyl picture and rotation for index */
+#vinyl{
+	width: 50%;
+	  
+}
+.rotation{
+	animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(359deg);
+	}
+}
+
+.image{
+	text-align: center;	
+	width: 100%;
+	height: auto;
+}
+
+.nav{
+	float:left;
+	display: grid;
+	background-color: #f5deb3;
+    grid-template-columns: 33.3% 33.3% 33.4%;
+	font-size: 1.5vw;
+    align-items:center;
+    width: 100%;
+	height: auto;
+}
+
+
+/* Navigation links */
+a{
+	padding: 3% 0 3% 0;
+	border-color:gray;
+	border-style:solid;
+	height:max-content;
+	font-size: 120%;
+}
+a:link{
+	color: black;
+}
+
+a:visited{
+	color:rgb(176, 62, 62);
+}
+a:hover{
+	color:rgb(121, 30, 30);
+}
+a{
+	width: auto;
+}
+/* Audio stuff for index */
+#songname{
+	display: none;
+}
+
+.songnameshow{
+	animation: fadeIn 3s;
+}
+
+/* Slideshow content for pg2 */
+.slides {
+	display: none;
+	animation: fadeIn 1s;
+}
+.slide-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 50px;
+	color:#c7b3f5;
+	max-width: 100%;
+	padding-top: 5%;
+	margin: 0;
+	margin: auto;
+}
+/*  Hovering over next and previous buttons for slideshow   */
+.prev, .next {
+	background-image: url(../images/arrowright.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 15% 5% 14.7% 5%;	
+	border-radius: 0 3px 3px 0;
+	border-color: #c7b3f5;
+	animation: fadeIn 2s;
+	margin-bottom: auto;
+	transition: 0.6s ease;
+  }
+
+.prev{
+	background-image: url(../images/arrowleft.png);
+}
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+.slides .image{
+	width: 30vw;
+	margin:0;
+	padding: 0;
+}  
+.caption{
+	font-size: 2vw;
+	font-style: oblique;
+	animation: fadeIn 2s;
+}
+h1{
+	padding-top: 5vh;
+	color: #c7b3f5;
+}
+
+/* pg 3 memory game */
+.match-game{
+	width: 640px;
+	height: 640px;
+	margin: auto;
+	position: relative;
+	display: flex;
+	text-align: left;
+	flex-wrap:wrap;
+	padding-bottom: 10vw;
+	perspective: 1000px;
+}
+.card{
+	width: 23%;
+	height: 33.333%;
+	position: relative;
+	margin: 1%;
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform .7s;
+}
+/* little animation for clicking down on the card */
+.card:active{
+	transform: scale(0.95);	
+}
+.card.flip{
+	transform: rotateY(180deg);		/* rotate card 180 degrees, show the other side*/
+}
+
+.front, .back{
+	width: 100%;
+	height: 100%;
+	position:absolute;		/* to stack the cards above each other */
+	backface-visibility: hidden; /* hide the inverted card and switch out with the album cover*/
+}
+.front{
+	transform: rotateY(180deg);	/* show the album cover */
+}
+
+@media screen and (max-width : 720px) {
+	body{
+		background: red;
+		display: flex;
+		flex-direction: column;
+	}
+	.container, .content-intro{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		font-size: 3vh;
+		margin-right: auto;
+		margin-left: auto;
+		text-shadow: none;
+	}
+	.nav{
+		grid-template-columns: none;
+		font-size: 3vh;
+	}
+	.content{
+		margin: 0 50px 0 50px;
+		
+	}
+	.image{
+
+		text-align: center;	
+		width: 100%;
+		height: auto;
+	}
+	.slide-content{
+		font-size: 5vw;
+	}
+	.caption{
+		display: none;
+	}
+	.flex-row{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items:center ;
+	}
+	.flex-row .content-intro{
+		width: 90%;
+	}
+	.flex-row .image{
+		margin-right: 0;
+	}
+	footer{
+		text-align: center;
+		font-size: 40px;
+	}
+	.match-game{
+		width:65vw;
+		height: 65vh;
+	}
+}
+
+@media screen and (max-width : 540px) {
+	body{
+
+		background: blue;
+	}
+	.content {
+		font-size: 3vh;
+	}
+	.container{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.image{
+		padding-top: 10vh;
+	}
+
+}
+
+footer h5{
+	padding: 0;
+	margin:0;
+	animation: fadeIn 3s;
+}
+footer{
+	padding: 2vh 0 3vh 7vw;
+	text-align: left;
+	font-size: 1.8vw;
+	color:#c7b3f5;
+	background-color: #121526;
+
+}
