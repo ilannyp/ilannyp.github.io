@@ -23,6 +23,7 @@ function showSongName(){
 document.querySelector("#vinyl").addEventListener("click",function(){
     rotateImg(); // rotate vinyl on click
     showSongName();
+    togglePlay();
 }) 
 
 
@@ -65,16 +66,13 @@ function showCurrentSlide(dir){                 //dir = direction, how many time
 function plusSlides(n) {
     showCurrentSlide(index += n);
   }
-  
-  function currentSlide(n) {
-    showCurrentSlide(index = n);
-  }
 }
 
 /*  page 3 */
 if(document.URL.includes("pg3.html"))
 {
-const cardArray = document.querySelectorAll('.card');       //gets all the
+const cardArray = document.querySelectorAll('.card');       //gets all the cards
+
 var flippedCard = false;    //if user flipped card alr or not
 var first, second;      //the first and second card user chose
 var cooldownOver = false;       //make sure player doesnt spam all the cards
@@ -98,7 +96,7 @@ function cardFlip(){
         flippedCard = false;
         second = this;
 
-        if(first.getAttribute('id') === second.getAttribute('id'))      //if both IDs correspond
+        if(first.dataset.name === second.dataset.name)      //if both data names correspond
         {
             first.removeEventListener('click',cardFlip);
             second.removeEventListener('click',cardFlip);       //make sure both cant be flipped after matching
@@ -118,7 +116,7 @@ function cardFlip(){
 
 (function cardShuffle(){
     cardArray.forEach(card =>{
-        let random = Math.floor(Math.random() * 8);
+        let random = Math.floor(Math.random() * cardArray.length);
         card.style.order = random;
     });
 })(); //this bracket means that the function is invoked as soon as it is defined
